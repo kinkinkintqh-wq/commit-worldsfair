@@ -1,0 +1,272 @@
+{
+  "schema": "commit.worldsfair.evidence.v1",
+  "id": "r_312d723f-5add-46d5-8e02-00911c8a53c8",
+  "quoteId": "q_e720289f-13a7-477d-ac0e-151f60053f60",
+  "mode": "devnet",
+  "buyer": "HAsiCfPMKjYwdFUpzcU8QS4mjBqGCo4k5wgBiNuhwBYx",
+  "terms": {
+    "service": "search.v1",
+    "query": "Solana USDC payments",
+    "quantity": 3,
+    "start": 1791179820000,
+    "end": 1791180420000,
+    "unitPriceMicros": 50000,
+    "totalMicros": 150000,
+    "currency": "USDC (Devnet)",
+    "latencyLimitMs": 1500,
+    "minCitations": 1,
+    "provider": "Commit ResearchNode",
+    "verifier": "Commit-operated",
+    "refundPolicy": "Full refund if delivery fails SLA; unpaid holds do not count as paid orders.",
+    "custody": "Project-operated custody; no deployed custom escrow program"
+  },
+  "termsHash": "a484153cb03bcdb106ee2f004e7211bd8d8b5daf1d8ac3513ce767e3ca8ab30d",
+  "status": "settled",
+  "createdAt": 1791179699998,
+  "events": [
+    {
+      "sequence": 1,
+      "type": "quote",
+      "at": "2026-10-05T05:55:00.008Z",
+      "recordedAt": "2026-10-05T05:55:00.008Z",
+      "detail": {
+        "quoteId": "q_e720289f-13a7-477d-ac0e-151f60053f60",
+        "termsHash": "a484153cb03bcdb106ee2f004e7211bd8d8b5daf1d8ac3513ce767e3ca8ab30d",
+        "expiresAt": 1791179787784
+      },
+      "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "d9ef9becb890353d15250d6158df52ce06f1876408135b617cd653071a4d1fcf"
+    },
+    {
+      "sequence": 2,
+      "type": "reserve",
+      "at": "2026-10-05T05:55:00.008Z",
+      "recordedAt": "2026-10-05T05:55:00.008Z",
+      "detail": {
+        "quantity": 3,
+        "windowStart": 1791179820000,
+        "termsHash": "a484153cb03bcdb106ee2f004e7211bd8d8b5daf1d8ac3513ce767e3ca8ab30d"
+      },
+      "previousHash": "d9ef9becb890353d15250d6158df52ce06f1876408135b617cd653071a4d1fcf",
+      "hash": "2511043373df98fe46fe7422eadbeab60e875831e4c21af7e7e4c6529c213478"
+    },
+    {
+      "sequence": 3,
+      "type": "escrow",
+      "at": "2026-10-05T05:55:46.845Z",
+      "recordedAt": "2026-10-05T05:55:46.845Z",
+      "detail": {
+        "kind": "solana-devnet",
+        "signature": "56DA9a6Rcm15qMxhGMKspLpSGRknFQjBjUbjvAsrTPWJcVXQC3YEhXiHu4zWxoajZV7Tc3LYV3rwFSj6No3GUqNa",
+        "slot": 507632085,
+        "amountMicros": 150000,
+        "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+        "vault": "7TqxG7Y8UZMkLMpgGHPPjCv7S8f3ifCjbRuPzzAuMDdp",
+        "explorer": "https://explorer.solana.com/tx/56DA9a6Rcm15qMxhGMKspLpSGRknFQjBjUbjvAsrTPWJcVXQC3YEhXiHu4zWxoajZV7Tc3LYV3rwFSj6No3GUqNa?cluster=devnet"
+      },
+      "previousHash": "2511043373df98fe46fe7422eadbeab60e875831e4c21af7e7e4c6529c213478",
+      "hash": "a443f9fdfc602d7fb66ffffb8a6c070a6fa3381b2936fb6ce2ad82fef29d498f"
+    },
+    {
+      "sequence": 4,
+      "type": "execute_started",
+      "at": "2026-10-05T05:57:38.257Z",
+      "recordedAt": "2026-10-05T05:57:38.257Z",
+      "detail": {
+        "scenario": "success"
+      },
+      "previousHash": "a443f9fdfc602d7fb66ffffb8a6c070a6fa3381b2936fb6ce2ad82fef29d498f",
+      "hash": "eff6f7af920f86d895bb07fa8a4a08ec17e84b4f410ac70c18c4dff3b218367d"
+    },
+    {
+      "sequence": 5,
+      "type": "execute_completed",
+      "at": "2026-10-05T05:57:38.352Z",
+      "recordedAt": "2026-10-05T05:57:38.352Z",
+      "detail": {
+        "outputHash": "351644dfc1a447721f2047ef959c90b032471af93d64f0aa907807057b614fe5",
+        "observedLatencyMs": 93,
+        "error": null
+      },
+      "previousHash": "eff6f7af920f86d895bb07fa8a4a08ec17e84b4f410ac70c18c4dff3b218367d",
+      "hash": "7d9b2d99e33161c4663ca31b7e006fdd9b5d638cec74d36e142374ec5ec4ca57"
+    },
+    {
+      "sequence": 6,
+      "type": "verify",
+      "at": "2026-10-05T05:57:45.410Z",
+      "recordedAt": "2026-10-05T05:57:45.410Z",
+      "detail": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "Reserved quantity delivered",
+            "pass": true
+          },
+          {
+            "name": "Observed response within SLA",
+            "pass": true
+          },
+          {
+            "name": "Every unit has content and a source",
+            "pass": true
+          },
+          {
+            "name": "Sources match the declared corpus",
+            "pass": true
+          },
+          {
+            "name": "Output integrity",
+            "pass": true
+          },
+          {
+            "name": "Delivery completed inside the booked window",
+            "pass": true
+          }
+        ],
+        "verifier": "Commit-operated schema + latency verifier",
+        "proofHash": "d765c8d520ad90df60be3085ebfa35a8a97a6b27e5af52029eae17e9c4a8cf65",
+        "limitation": "Verifies delivery shape and observed latency; does not prove semantic truth or independent resource availability."
+      },
+      "previousHash": "7d9b2d99e33161c4663ca31b7e006fdd9b5d638cec74d36e142374ec5ec4ca57",
+      "hash": "428c689fd1c7ba950b8b29912498e15349180025d13ab800aab1620b6214f0ff"
+    },
+    {
+      "sequence": 7,
+      "type": "settle",
+      "at": "2026-10-05T05:57:52.925Z",
+      "recordedAt": "2026-10-05T05:57:52.925Z",
+      "detail": {
+        "kind": "solana-devnet",
+        "signature": "3CBjX2vKkAvgb7KU7otJiLs8WAQVqRnkX1upwv1egwVCaZBoeDTtmQ6b9H9sV7U5ZMtT9jQtZwTivk4R6WbuBg8j",
+        "amountMicros": 150000,
+        "recipient": "CfdunUSjDhCqtjNxPVkqxJcMs7f2EdYxKFcmqvk6zdiM",
+        "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+        "explorer": "https://explorer.solana.com/tx/3CBjX2vKkAvgb7KU7otJiLs8WAQVqRnkX1upwv1egwVCaZBoeDTtmQ6b9H9sV7U5ZMtT9jQtZwTivk4R6WbuBg8j?cluster=devnet",
+        "providerMicros": 150000,
+        "refundMicros": 0,
+        "escrowRemainingMicros": 0,
+        "proofHash": "d765c8d520ad90df60be3085ebfa35a8a97a6b27e5af52029eae17e9c4a8cf65"
+      },
+      "previousHash": "428c689fd1c7ba950b8b29912498e15349180025d13ab800aab1620b6214f0ff",
+      "hash": "6e251f7dbab68ba710662262222b89813d10aff3b2e4ad83b970f50e5da894a5"
+    }
+  ],
+  "payment": {
+    "kind": "solana-devnet",
+    "signature": "56DA9a6Rcm15qMxhGMKspLpSGRknFQjBjUbjvAsrTPWJcVXQC3YEhXiHu4zWxoajZV7Tc3LYV3rwFSj6No3GUqNa",
+    "slot": 507632085,
+    "amountMicros": 150000,
+    "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+    "vault": "7TqxG7Y8UZMkLMpgGHPPjCv7S8f3ifCjbRuPzzAuMDdp",
+    "explorer": "https://explorer.solana.com/tx/56DA9a6Rcm15qMxhGMKspLpSGRknFQjBjUbjvAsrTPWJcVXQC3YEhXiHu4zWxoajZV7Tc3LYV3rwFSj6No3GUqNa?cluster=devnet"
+  },
+  "execution": {
+    "units": [
+      {
+        "unit": 1,
+        "query": "Solana USDC payments",
+        "answer": "SPL tokens move between accounts for the same mint. TransferChecked checks the mint and its decimal precision. Circle lists a separate Solana Devnet USDC mint. Devnet tokens are used for testing and have no financial value.",
+        "citations": [
+          {
+            "id": "solana",
+            "title": "Solana token transfers",
+            "url": "https://solana.com/docs/tokens/basics/transfer-tokens"
+          },
+          {
+            "id": "circle",
+            "title": "Circle USDC addresses",
+            "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+          }
+        ]
+      },
+      {
+        "unit": 2,
+        "query": "Solana USDC payments",
+        "answer": "SPL tokens move between accounts for the same mint. TransferChecked checks the mint and its decimal precision. Circle lists a separate Solana Devnet USDC mint. Devnet tokens are used for testing and have no financial value.",
+        "citations": [
+          {
+            "id": "solana",
+            "title": "Solana token transfers",
+            "url": "https://solana.com/docs/tokens/basics/transfer-tokens"
+          },
+          {
+            "id": "circle",
+            "title": "Circle USDC addresses",
+            "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+          }
+        ]
+      },
+      {
+        "unit": 3,
+        "query": "Solana USDC payments",
+        "answer": "SPL tokens move between accounts for the same mint. TransferChecked checks the mint and its decimal precision. Circle lists a separate Solana Devnet USDC mint. Devnet tokens are used for testing and have no financial value.",
+        "citations": [
+          {
+            "id": "solana",
+            "title": "Solana token transfers",
+            "url": "https://solana.com/docs/tokens/basics/transfer-tokens"
+          },
+          {
+            "id": "circle",
+            "title": "Circle USDC addresses",
+            "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+          }
+        ]
+      }
+    ],
+    "observedLatencyMs": 93,
+    "provider": "Commit ResearchNode / project-operated",
+    "corpusVersion": "2026-10-04",
+    "outputHash": "351644dfc1a447721f2047ef959c90b032471af93d64f0aa907807057b614fe5",
+    "scenario": "success"
+  },
+  "verification": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "Reserved quantity delivered",
+        "pass": true
+      },
+      {
+        "name": "Observed response within SLA",
+        "pass": true
+      },
+      {
+        "name": "Every unit has content and a source",
+        "pass": true
+      },
+      {
+        "name": "Sources match the declared corpus",
+        "pass": true
+      },
+      {
+        "name": "Output integrity",
+        "pass": true
+      },
+      {
+        "name": "Delivery completed inside the booked window",
+        "pass": true
+      }
+    ],
+    "verifier": "Commit-operated schema + latency verifier",
+    "proofHash": "d765c8d520ad90df60be3085ebfa35a8a97a6b27e5af52029eae17e9c4a8cf65",
+    "limitation": "Verifies delivery shape and observed latency; does not prove semantic truth or independent resource availability."
+  },
+  "settlement": {
+    "kind": "solana-devnet",
+    "signature": "3CBjX2vKkAvgb7KU7otJiLs8WAQVqRnkX1upwv1egwVCaZBoeDTtmQ6b9H9sV7U5ZMtT9jQtZwTivk4R6WbuBg8j",
+    "amountMicros": 150000,
+    "recipient": "CfdunUSjDhCqtjNxPVkqxJcMs7f2EdYxKFcmqvk6zdiM",
+    "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+    "explorer": "https://explorer.solana.com/tx/3CBjX2vKkAvgb7KU7otJiLs8WAQVqRnkX1upwv1egwVCaZBoeDTtmQ6b9H9sV7U5ZMtT9jQtZwTivk4R6WbuBg8j?cluster=devnet",
+    "providerMicros": 150000,
+    "refundMicros": 0,
+    "escrowRemainingMicros": 0,
+    "proofHash": "d765c8d520ad90df60be3085ebfa35a8a97a6b27e5af52029eae17e9c4a8cf65"
+  },
+  "vault": "7TqxG7Y8UZMkLMpgGHPPjCv7S8f3ifCjbRuPzzAuMDdp",
+  "updatedAt": 1791179872925,
+  "executionStartedAt": 1791179858256,
+  "executionCompletedAt": 1791179858352
+}

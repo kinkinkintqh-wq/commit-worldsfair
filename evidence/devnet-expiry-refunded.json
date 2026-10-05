@@ -1,0 +1,147 @@
+{
+  "schema": "commit.worldsfair.evidence.v1",
+  "id": "r_ca2255f9-1455-412a-a5f1-e04dd3c40056",
+  "quoteId": "q_a2b31b77-9367-4444-b440-4ca60b755b21",
+  "mode": "devnet",
+  "buyer": "HAsiCfPMKjYwdFUpzcU8QS4mjBqGCo4k5wgBiNuhwBYx",
+  "terms": {
+    "service": "search.v1",
+    "query": "Solana USDC payments",
+    "quantity": 3,
+    "start": 1791144240000,
+    "end": 1791144840000,
+    "unitPriceMicros": 50000,
+    "totalMicros": 150000,
+    "currency": "USDC (Devnet)",
+    "latencyLimitMs": 1500,
+    "minCitations": 1,
+    "provider": "Commit ResearchNode",
+    "verifier": "Commit-operated",
+    "refundPolicy": "Full refund if delivery fails SLA; unpaid holds do not count as paid orders.",
+    "custody": "Project-operated custody; no deployed custom escrow program"
+  },
+  "termsHash": "63d8c12aa584263c5c2056114277d151de41e03af2107ab0f88a3b1c897771ef",
+  "status": "refunded",
+  "createdAt": 1791142307272,
+  "events": [
+    {
+      "sequence": 1,
+      "type": "quote",
+      "at": "2026-10-04T19:31:47.275Z",
+      "recordedAt": "2026-10-04T19:31:47.275Z",
+      "detail": {
+        "quoteId": "q_a2b31b77-9367-4444-b440-4ca60b755b21",
+        "termsHash": "63d8c12aa584263c5c2056114277d151de41e03af2107ab0f88a3b1c897771ef",
+        "expiresAt": 1791142395666
+      },
+      "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "97fdf0b1a48149c84a0612e9567be6d291ef046b905721f358a04b63b3fa2fa6"
+    },
+    {
+      "sequence": 2,
+      "type": "reserve",
+      "at": "2026-10-04T19:31:47.276Z",
+      "recordedAt": "2026-10-04T19:31:47.276Z",
+      "detail": {
+        "quantity": 3,
+        "windowStart": 1791144240000,
+        "termsHash": "63d8c12aa584263c5c2056114277d151de41e03af2107ab0f88a3b1c897771ef"
+      },
+      "previousHash": "97fdf0b1a48149c84a0612e9567be6d291ef046b905721f358a04b63b3fa2fa6",
+      "hash": "93d20e283c9875a18a6420727bcf6d5c7dc551d0a31c7dbfa5f1703b83cbf204"
+    },
+    {
+      "sequence": 3,
+      "type": "escrow",
+      "at": "2026-10-04T19:32:34.039Z",
+      "recordedAt": "2026-10-04T19:32:34.039Z",
+      "detail": {
+        "kind": "solana-devnet",
+        "signature": "MusGHiVGPep44F6s5mxYoreBqYJo3D9wnsqTWuTRcRfL7gXxGsCrYCC5fvU15rfExQRAiNuDQTuXMQ3ykJL5SQe",
+        "slot": 507472560,
+        "amountMicros": 150000,
+        "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+        "vault": "Cnaa94VtnqJ4RcYLses6cH1F74qnTDhPex6Es1AuxhFU",
+        "explorer": "https://explorer.solana.com/tx/MusGHiVGPep44F6s5mxYoreBqYJo3D9wnsqTWuTRcRfL7gXxGsCrYCC5fvU15rfExQRAiNuDQTuXMQ3ykJL5SQe?cluster=devnet"
+      },
+      "previousHash": "93d20e283c9875a18a6420727bcf6d5c7dc551d0a31c7dbfa5f1703b83cbf204",
+      "hash": "dc8b58f4e5cf172348cb7956cb2f2bb085c5be8d8d5d970269d68dfa53c0bf62"
+    },
+    {
+      "sequence": 4,
+      "type": "verify_no_show",
+      "at": "2026-10-05T05:51:55.785Z",
+      "recordedAt": "2026-10-05T05:51:55.785Z",
+      "detail": {
+        "passed": false,
+        "checks": [
+          {
+            "name": "Provider executed inside window",
+            "pass": false
+          }
+        ],
+        "verifier": "Commit-operated",
+        "proofHash": "85e5f71330d34340a0907d9107c5472176b01f8dfb71c2e92498383d3abaed80",
+        "limitation": "No-show refund after window end."
+      },
+      "previousHash": "dc8b58f4e5cf172348cb7956cb2f2bb085c5be8d8d5d970269d68dfa53c0bf62",
+      "hash": "31aa584aaf13be3e74b9179dc6e8341beb7efc963bb7696f2a61198e7a0dd914"
+    },
+    {
+      "sequence": 5,
+      "type": "refund",
+      "at": "2026-10-05T05:51:59.545Z",
+      "recordedAt": "2026-10-05T05:51:59.545Z",
+      "detail": {
+        "kind": "solana-devnet",
+        "signature": "5C1xUGqobZDhY19Ugpk2eNeyDrTfiX8efifoUrgduYrZVo2eUHyZAiNZTvqdXxarDQVAhkdXxvEkeikRUNGmAg6V",
+        "amountMicros": 150000,
+        "recipient": "HAsiCfPMKjYwdFUpzcU8QS4mjBqGCo4k5wgBiNuhwBYx",
+        "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+        "explorer": "https://explorer.solana.com/tx/5C1xUGqobZDhY19Ugpk2eNeyDrTfiX8efifoUrgduYrZVo2eUHyZAiNZTvqdXxarDQVAhkdXxvEkeikRUNGmAg6V?cluster=devnet",
+        "providerMicros": 0,
+        "refundMicros": 150000,
+        "escrowRemainingMicros": 0,
+        "proofHash": "85e5f71330d34340a0907d9107c5472176b01f8dfb71c2e92498383d3abaed80"
+      },
+      "previousHash": "31aa584aaf13be3e74b9179dc6e8341beb7efc963bb7696f2a61198e7a0dd914",
+      "hash": "d37891ee31dc2177ef5bbb605b27d48a9723c6432939b358552b241b17269056"
+    }
+  ],
+  "payment": {
+    "kind": "solana-devnet",
+    "signature": "MusGHiVGPep44F6s5mxYoreBqYJo3D9wnsqTWuTRcRfL7gXxGsCrYCC5fvU15rfExQRAiNuDQTuXMQ3ykJL5SQe",
+    "slot": 507472560,
+    "amountMicros": 150000,
+    "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+    "vault": "Cnaa94VtnqJ4RcYLses6cH1F74qnTDhPex6Es1AuxhFU",
+    "explorer": "https://explorer.solana.com/tx/MusGHiVGPep44F6s5mxYoreBqYJo3D9wnsqTWuTRcRfL7gXxGsCrYCC5fvU15rfExQRAiNuDQTuXMQ3ykJL5SQe?cluster=devnet"
+  },
+  "execution": null,
+  "verification": {
+    "passed": false,
+    "checks": [
+      {
+        "name": "Provider executed inside window",
+        "pass": false
+      }
+    ],
+    "verifier": "Commit-operated",
+    "proofHash": "85e5f71330d34340a0907d9107c5472176b01f8dfb71c2e92498383d3abaed80",
+    "limitation": "No-show refund after window end."
+  },
+  "settlement": {
+    "kind": "solana-devnet",
+    "signature": "5C1xUGqobZDhY19Ugpk2eNeyDrTfiX8efifoUrgduYrZVo2eUHyZAiNZTvqdXxarDQVAhkdXxvEkeikRUNGmAg6V",
+    "amountMicros": 150000,
+    "recipient": "HAsiCfPMKjYwdFUpzcU8QS4mjBqGCo4k5wgBiNuhwBYx",
+    "mint": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+    "explorer": "https://explorer.solana.com/tx/5C1xUGqobZDhY19Ugpk2eNeyDrTfiX8efifoUrgduYrZVo2eUHyZAiNZTvqdXxarDQVAhkdXxvEkeikRUNGmAg6V?cluster=devnet",
+    "providerMicros": 0,
+    "refundMicros": 150000,
+    "escrowRemainingMicros": 0,
+    "proofHash": "85e5f71330d34340a0907d9107c5472176b01f8dfb71c2e92498383d3abaed80"
+  },
+  "vault": "Cnaa94VtnqJ4RcYLses6cH1F74qnTDhPex6Es1AuxhFU",
+  "updatedAt": 1791179519545
+}
