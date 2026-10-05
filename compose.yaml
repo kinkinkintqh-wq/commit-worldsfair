@@ -1,0 +1,14 @@
+name: commit-worldsfair-isolated
+services:
+  commit-worldsfair:
+    build: .
+    ports:
+      - "127.0.0.1:4317:4317"
+    environment:
+      COMMIT_WF_MODE: demo
+      COMMIT_WF_ORIGIN: http://127.0.0.1:4317
+    volumes:
+      - commit-worldsfair-state:/app/.state
+    restart: unless-stopped
+volumes:
+  commit-worldsfair-state:

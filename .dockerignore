@@ -1,0 +1,9 @@
+.git
+.state
+.env*
+node_modules
+dist
+qa
+tests
+submission
+docs
