@@ -1,0 +1,1029 @@
+{
+  "schema": "commit.worldsfair.qa.v1",
+  "generatedAt": "2026-10-04T12:34:13.962Z",
+  "mode": "simulation",
+  "note": "Actual new-code executions over a fixed corpus. No blockchain transactions or external customer usage.",
+  "records": [
+    {
+      "id": "r_ba23312b-2b9b-45af-8249-1d78b38e4348",
+      "quoteId": "q_4daeff67-567a-47e5-a3d0-3ea8c2b28e74",
+      "mode": "demo",
+      "buyer": "demo-buyer",
+      "terms": {
+        "service": "search.v1",
+        "query": "Solana USDC payments",
+        "quantity": 3,
+        "start": 1791117300000,
+        "end": 1791117900000,
+        "unitPriceMicros": 50000,
+        "totalMicros": 150000,
+        "currency": "simulated USD",
+        "latencyLimitMs": 1500,
+        "minCitations": 1,
+        "provider": "Commit ResearchNode",
+        "verifier": "Commit-operated",
+        "refundPolicy": "Full refund if delivery fails SLA; unpaid holds do not count as paid orders.",
+        "custody": "Project-operated custody; no deployed custom escrow program"
+      },
+      "termsHash": "3ec5eeab64c6f38fb4e7211e4ec1f125954f9a4a26fbea12bedc39d232ebf326",
+      "status": "settled",
+      "createdAt": 1791117252145,
+      "events": [
+        {
+          "sequence": 1,
+          "type": "quote",
+          "at": "2026-10-04T12:34:12.145Z",
+          "recordedAt": "2026-10-04T12:34:12.145Z",
+          "detail": {
+            "quoteId": "q_4daeff67-567a-47e5-a3d0-3ea8c2b28e74",
+            "termsHash": "3ec5eeab64c6f38fb4e7211e4ec1f125954f9a4a26fbea12bedc39d232ebf326",
+            "expiresAt": 1791117300000
+          },
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "hash": "99776daf4237145663e4191fe1c0eafc254e6b13a1860fd0f70ba7ac08cb26de"
+        },
+        {
+          "sequence": 2,
+          "type": "reserve",
+          "at": "2026-10-04T12:34:12.145Z",
+          "recordedAt": "2026-10-04T12:34:12.145Z",
+          "detail": {
+            "quantity": 3,
+            "windowStart": 1791117300000,
+            "termsHash": "3ec5eeab64c6f38fb4e7211e4ec1f125954f9a4a26fbea12bedc39d232ebf326"
+          },
+          "previousHash": "99776daf4237145663e4191fe1c0eafc254e6b13a1860fd0f70ba7ac08cb26de",
+          "hash": "98b07e7e1bf2611964526d7d70d1b47edd7a41e9bca7fb4240e3b2d6451a1945"
+        },
+        {
+          "sequence": 3,
+          "type": "escrow",
+          "at": "2026-10-04T12:34:12.146Z",
+          "recordedAt": "2026-10-04T12:34:12.146Z",
+          "detail": {
+            "kind": "simulation",
+            "amountMicros": 150000,
+            "signature": null
+          },
+          "previousHash": "98b07e7e1bf2611964526d7d70d1b47edd7a41e9bca7fb4240e3b2d6451a1945",
+          "hash": "9fd30189158f70b0bf48ecd78d029b7527afd9f8a350ae973dc911573508305d"
+        },
+        {
+          "sequence": 4,
+          "type": "demo_clock_advanced",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:12.146Z",
+          "detail": {
+            "note": "Demo clock only; no chain or wall clock was changed."
+          },
+          "previousHash": "9fd30189158f70b0bf48ecd78d029b7527afd9f8a350ae973dc911573508305d",
+          "hash": "a04844f432d1c474e98369bae67780c9a1f0e65f96817abafe9a25c3e3646c04"
+        },
+        {
+          "sequence": 5,
+          "type": "execute_started",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:12.146Z",
+          "detail": {
+            "scenario": "success"
+          },
+          "previousHash": "a04844f432d1c474e98369bae67780c9a1f0e65f96817abafe9a25c3e3646c04",
+          "hash": "1b039b5c70c78b98a71dfbebe973323635ba5c6fbbb8c783db60054e7ca91fd1"
+        },
+        {
+          "sequence": 6,
+          "type": "execute_completed",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:12.238Z",
+          "detail": {
+            "outputHash": "351644dfc1a447721f2047ef959c90b032471af93d64f0aa907807057b614fe5",
+            "observedLatencyMs": 93,
+            "error": null
+          },
+          "previousHash": "1b039b5c70c78b98a71dfbebe973323635ba5c6fbbb8c783db60054e7ca91fd1",
+          "hash": "5521cbbc51f7dc3014bb5a1370be40425fda7ab288729f26045249e867bb422e"
+        },
+        {
+          "sequence": 7,
+          "type": "verify",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:12.239Z",
+          "detail": {
+            "passed": true,
+            "checks": [
+              {
+                "name": "Reserved quantity delivered",
+                "pass": true
+              },
+              {
+                "name": "Observed response within SLA",
+                "pass": true
+              },
+              {
+                "name": "Every unit has content and a source",
+                "pass": true
+              },
+              {
+                "name": "Sources match the declared corpus",
+                "pass": true
+              },
+              {
+                "name": "Output integrity",
+                "pass": true
+              },
+              {
+                "name": "Delivery completed inside the booked window",
+                "pass": true
+              }
+            ],
+            "verifier": "Commit-operated schema + latency verifier",
+            "proofHash": "e5ec28ba987a70d9e9ab6f19cbc18a7a048831837104bd7efac1b47e73ca9c8b",
+            "limitation": "Verifies delivery shape and observed latency; does not prove semantic truth or independent resource availability."
+          },
+          "previousHash": "5521cbbc51f7dc3014bb5a1370be40425fda7ab288729f26045249e867bb422e",
+          "hash": "c43dd48e6189cc0b28452230ac9ae86b58c7204137b1048fe89ff2c2a948e6d8"
+        },
+        {
+          "sequence": 8,
+          "type": "settle",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:12.239Z",
+          "detail": {
+            "kind": "simulation",
+            "signature": null,
+            "amountMicros": 150000,
+            "recipient": "demo-provider",
+            "providerMicros": 150000,
+            "refundMicros": 0,
+            "escrowRemainingMicros": 0,
+            "proofHash": "e5ec28ba987a70d9e9ab6f19cbc18a7a048831837104bd7efac1b47e73ca9c8b"
+          },
+          "previousHash": "c43dd48e6189cc0b28452230ac9ae86b58c7204137b1048fe89ff2c2a948e6d8",
+          "hash": "7a1d503f245389131257be2fe3ee760ef10518d01b746005c3adc3475492a939"
+        }
+      ],
+      "payment": {
+        "kind": "simulation",
+        "amountMicros": 150000,
+        "signature": null
+      },
+      "execution": {
+        "units": [
+          {
+            "unit": 1,
+            "query": "Solana USDC payments",
+            "answer": "SPL tokens move between accounts for the same mint. TransferChecked checks the mint and its decimal precision. Circle lists a separate Solana Devnet USDC mint. Devnet tokens are used for testing and have no financial value.",
+            "citations": [
+              {
+                "id": "solana",
+                "title": "Solana token transfers",
+                "url": "https://solana.com/docs/tokens/basics/transfer-tokens"
+              },
+              {
+                "id": "circle",
+                "title": "Circle USDC addresses",
+                "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+              }
+            ]
+          },
+          {
+            "unit": 2,
+            "query": "Solana USDC payments",
+            "answer": "SPL tokens move between accounts for the same mint. TransferChecked checks the mint and its decimal precision. Circle lists a separate Solana Devnet USDC mint. Devnet tokens are used for testing and have no financial value.",
+            "citations": [
+              {
+                "id": "solana",
+                "title": "Solana token transfers",
+                "url": "https://solana.com/docs/tokens/basics/transfer-tokens"
+              },
+              {
+                "id": "circle",
+                "title": "Circle USDC addresses",
+                "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+              }
+            ]
+          },
+          {
+            "unit": 3,
+            "query": "Solana USDC payments",
+            "answer": "SPL tokens move between accounts for the same mint. TransferChecked checks the mint and its decimal precision. Circle lists a separate Solana Devnet USDC mint. Devnet tokens are used for testing and have no financial value.",
+            "citations": [
+              {
+                "id": "solana",
+                "title": "Solana token transfers",
+                "url": "https://solana.com/docs/tokens/basics/transfer-tokens"
+              },
+              {
+                "id": "circle",
+                "title": "Circle USDC addresses",
+                "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+              }
+            ]
+          }
+        ],
+        "observedLatencyMs": 93,
+        "provider": "Commit ResearchNode / project-operated",
+        "corpusVersion": "2026-10-04",
+        "outputHash": "351644dfc1a447721f2047ef959c90b032471af93d64f0aa907807057b614fe5",
+        "scenario": "success"
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "Reserved quantity delivered",
+            "pass": true
+          },
+          {
+            "name": "Observed response within SLA",
+            "pass": true
+          },
+          {
+            "name": "Every unit has content and a source",
+            "pass": true
+          },
+          {
+            "name": "Sources match the declared corpus",
+            "pass": true
+          },
+          {
+            "name": "Output integrity",
+            "pass": true
+          },
+          {
+            "name": "Delivery completed inside the booked window",
+            "pass": true
+          }
+        ],
+        "verifier": "Commit-operated schema + latency verifier",
+        "proofHash": "e5ec28ba987a70d9e9ab6f19cbc18a7a048831837104bd7efac1b47e73ca9c8b",
+        "limitation": "Verifies delivery shape and observed latency; does not prove semantic truth or independent resource availability."
+      },
+      "settlement": {
+        "kind": "simulation",
+        "signature": null,
+        "amountMicros": 150000,
+        "recipient": "demo-provider",
+        "providerMicros": 150000,
+        "refundMicros": 0,
+        "escrowRemainingMicros": 0,
+        "proofHash": "e5ec28ba987a70d9e9ab6f19cbc18a7a048831837104bd7efac1b47e73ca9c8b"
+      },
+      "updatedAt": 1791117252239,
+      "demoClock": 1791117300000,
+      "executionStartedAt": 1791117300000,
+      "executionCompletedAt": 1791117300093
+    },
+    {
+      "id": "r_a4cf8a9e-aaf4-4b78-a450-3838d509f467",
+      "quoteId": "q_64bdb948-5515-4a4d-bd97-ab8983fbb645",
+      "mode": "demo",
+      "buyer": "demo-buyer",
+      "terms": {
+        "service": "search.v1",
+        "query": "Solana USDC payments",
+        "quantity": 3,
+        "start": 1791117300000,
+        "end": 1791117900000,
+        "unitPriceMicros": 50000,
+        "totalMicros": 150000,
+        "currency": "simulated USD",
+        "latencyLimitMs": 1500,
+        "minCitations": 1,
+        "provider": "Commit ResearchNode",
+        "verifier": "Commit-operated",
+        "refundPolicy": "Full refund if delivery fails SLA; unpaid holds do not count as paid orders.",
+        "custody": "Project-operated custody; no deployed custom escrow program"
+      },
+      "termsHash": "3ec5eeab64c6f38fb4e7211e4ec1f125954f9a4a26fbea12bedc39d232ebf326",
+      "status": "refunded",
+      "createdAt": 1791117252239,
+      "events": [
+        {
+          "sequence": 1,
+          "type": "quote",
+          "at": "2026-10-04T12:34:12.239Z",
+          "recordedAt": "2026-10-04T12:34:12.239Z",
+          "detail": {
+            "quoteId": "q_64bdb948-5515-4a4d-bd97-ab8983fbb645",
+            "termsHash": "3ec5eeab64c6f38fb4e7211e4ec1f125954f9a4a26fbea12bedc39d232ebf326",
+            "expiresAt": 1791117300000
+          },
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "hash": "770b36ed02873934cfd670c46e596f9634b0b73c51cb5c1d5b62c705ee9e122d"
+        },
+        {
+          "sequence": 2,
+          "type": "reserve",
+          "at": "2026-10-04T12:34:12.239Z",
+          "recordedAt": "2026-10-04T12:34:12.239Z",
+          "detail": {
+            "quantity": 3,
+            "windowStart": 1791117300000,
+            "termsHash": "3ec5eeab64c6f38fb4e7211e4ec1f125954f9a4a26fbea12bedc39d232ebf326"
+          },
+          "previousHash": "770b36ed02873934cfd670c46e596f9634b0b73c51cb5c1d5b62c705ee9e122d",
+          "hash": "a421fa7358b27e290a7995a1a9a0767fa6b5ed261e224e2a13f177609ed5c506"
+        },
+        {
+          "sequence": 3,
+          "type": "escrow",
+          "at": "2026-10-04T12:34:12.239Z",
+          "recordedAt": "2026-10-04T12:34:12.239Z",
+          "detail": {
+            "kind": "simulation",
+            "amountMicros": 150000,
+            "signature": null
+          },
+          "previousHash": "a421fa7358b27e290a7995a1a9a0767fa6b5ed261e224e2a13f177609ed5c506",
+          "hash": "920557b8d348579878ada9aa99a506a1095968b405868199f05091606bbd4c76"
+        },
+        {
+          "sequence": 4,
+          "type": "demo_clock_advanced",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:12.239Z",
+          "detail": {
+            "note": "Demo clock only; no chain or wall clock was changed."
+          },
+          "previousHash": "920557b8d348579878ada9aa99a506a1095968b405868199f05091606bbd4c76",
+          "hash": "f6f65c0900e9acb774180c7742a5dfc2879587ea0f9a565e138697202d62a3bf"
+        },
+        {
+          "sequence": 5,
+          "type": "execute_started",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:12.239Z",
+          "detail": {
+            "scenario": "failure"
+          },
+          "previousHash": "f6f65c0900e9acb774180c7742a5dfc2879587ea0f9a565e138697202d62a3bf",
+          "hash": "6bb1d511bc2ce5fcfcf1dae2005ce62858a6349d4cbac7ee0e474dd184b049be"
+        },
+        {
+          "sequence": 6,
+          "type": "execute_completed",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:12.331Z",
+          "detail": {
+            "outputHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "observedLatencyMs": 92,
+            "error": "Controlled provider failure"
+          },
+          "previousHash": "6bb1d511bc2ce5fcfcf1dae2005ce62858a6349d4cbac7ee0e474dd184b049be",
+          "hash": "ca04266d66a34794b11acf606886acc8f5f2295d4a1f07ab711010e9ffb8dc25"
+        },
+        {
+          "sequence": 7,
+          "type": "verify",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:12.331Z",
+          "detail": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "Reserved quantity delivered",
+                "pass": false
+              },
+              {
+                "name": "Observed response within SLA",
+                "pass": false
+              },
+              {
+                "name": "Every unit has content and a source",
+                "pass": false
+              },
+              {
+                "name": "Sources match the declared corpus",
+                "pass": false
+              },
+              {
+                "name": "Output integrity",
+                "pass": true
+              },
+              {
+                "name": "Delivery completed inside the booked window",
+                "pass": true
+              }
+            ],
+            "verifier": "Commit-operated schema + latency verifier",
+            "proofHash": "814f646e886054889a4230a84376afd8b1846d7f6a27511bd6ccb47283640a4c",
+            "limitation": "Verifies delivery shape and observed latency; does not prove semantic truth or independent resource availability."
+          },
+          "previousHash": "ca04266d66a34794b11acf606886acc8f5f2295d4a1f07ab711010e9ffb8dc25",
+          "hash": "ebff0cb58d2bdc23e1501ccfde22f361cf0c0b2c556fe3277032f60765f00a9f"
+        },
+        {
+          "sequence": 8,
+          "type": "refund",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:12.331Z",
+          "detail": {
+            "kind": "simulation",
+            "signature": null,
+            "amountMicros": 150000,
+            "recipient": "demo-buyer",
+            "providerMicros": 0,
+            "refundMicros": 150000,
+            "escrowRemainingMicros": 0,
+            "proofHash": "814f646e886054889a4230a84376afd8b1846d7f6a27511bd6ccb47283640a4c"
+          },
+          "previousHash": "ebff0cb58d2bdc23e1501ccfde22f361cf0c0b2c556fe3277032f60765f00a9f",
+          "hash": "f2607b40dedc18518e672c2506bd24e4eb29dffbca1850091e7474340b3dff34"
+        }
+      ],
+      "payment": {
+        "kind": "simulation",
+        "amountMicros": 150000,
+        "signature": null
+      },
+      "execution": {
+        "units": [],
+        "observedLatencyMs": 92,
+        "provider": "Commit ResearchNode",
+        "outputHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "error": "Controlled provider failure",
+        "scenario": "failure"
+      },
+      "verification": {
+        "passed": false,
+        "checks": [
+          {
+            "name": "Reserved quantity delivered",
+            "pass": false
+          },
+          {
+            "name": "Observed response within SLA",
+            "pass": false
+          },
+          {
+            "name": "Every unit has content and a source",
+            "pass": false
+          },
+          {
+            "name": "Sources match the declared corpus",
+            "pass": false
+          },
+          {
+            "name": "Output integrity",
+            "pass": true
+          },
+          {
+            "name": "Delivery completed inside the booked window",
+            "pass": true
+          }
+        ],
+        "verifier": "Commit-operated schema + latency verifier",
+        "proofHash": "814f646e886054889a4230a84376afd8b1846d7f6a27511bd6ccb47283640a4c",
+        "limitation": "Verifies delivery shape and observed latency; does not prove semantic truth or independent resource availability."
+      },
+      "settlement": {
+        "kind": "simulation",
+        "signature": null,
+        "amountMicros": 150000,
+        "recipient": "demo-buyer",
+        "providerMicros": 0,
+        "refundMicros": 150000,
+        "escrowRemainingMicros": 0,
+        "proofHash": "814f646e886054889a4230a84376afd8b1846d7f6a27511bd6ccb47283640a4c"
+      },
+      "updatedAt": 1791117252331,
+      "demoClock": 1791117300000,
+      "executionStartedAt": 1791117300000,
+      "executionCompletedAt": 1791117300092
+    },
+    {
+      "id": "r_68bc2914-8a47-4ce9-adad-58bba744a31b",
+      "quoteId": "q_47ad823f-4215-4c06-bd92-ec1f32c59f90",
+      "mode": "demo",
+      "buyer": "demo-buyer",
+      "terms": {
+        "service": "search.v1",
+        "query": "Solana USDC payments",
+        "quantity": 3,
+        "start": 1791117300000,
+        "end": 1791117900000,
+        "unitPriceMicros": 50000,
+        "totalMicros": 150000,
+        "currency": "simulated USD",
+        "latencyLimitMs": 1500,
+        "minCitations": 1,
+        "provider": "Commit ResearchNode",
+        "verifier": "Commit-operated",
+        "refundPolicy": "Full refund if delivery fails SLA; unpaid holds do not count as paid orders.",
+        "custody": "Project-operated custody; no deployed custom escrow program"
+      },
+      "termsHash": "3ec5eeab64c6f38fb4e7211e4ec1f125954f9a4a26fbea12bedc39d232ebf326",
+      "status": "refunded",
+      "createdAt": 1791117252332,
+      "events": [
+        {
+          "sequence": 1,
+          "type": "quote",
+          "at": "2026-10-04T12:34:12.332Z",
+          "recordedAt": "2026-10-04T12:34:12.332Z",
+          "detail": {
+            "quoteId": "q_47ad823f-4215-4c06-bd92-ec1f32c59f90",
+            "termsHash": "3ec5eeab64c6f38fb4e7211e4ec1f125954f9a4a26fbea12bedc39d232ebf326",
+            "expiresAt": 1791117300000
+          },
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "hash": "c17d2f2d5104e9681e40d16d08ac8b6294e0457a85340b615d9d0c8ce7e3b9c3"
+        },
+        {
+          "sequence": 2,
+          "type": "reserve",
+          "at": "2026-10-04T12:34:12.332Z",
+          "recordedAt": "2026-10-04T12:34:12.332Z",
+          "detail": {
+            "quantity": 3,
+            "windowStart": 1791117300000,
+            "termsHash": "3ec5eeab64c6f38fb4e7211e4ec1f125954f9a4a26fbea12bedc39d232ebf326"
+          },
+          "previousHash": "c17d2f2d5104e9681e40d16d08ac8b6294e0457a85340b615d9d0c8ce7e3b9c3",
+          "hash": "9c38b625dd2a3811d1abc9da86bfe594b636484f80874bba40fc3f6da7545bd7"
+        },
+        {
+          "sequence": 3,
+          "type": "escrow",
+          "at": "2026-10-04T12:34:12.332Z",
+          "recordedAt": "2026-10-04T12:34:12.332Z",
+          "detail": {
+            "kind": "simulation",
+            "amountMicros": 150000,
+            "signature": null
+          },
+          "previousHash": "9c38b625dd2a3811d1abc9da86bfe594b636484f80874bba40fc3f6da7545bd7",
+          "hash": "9bba997e67415a28d995b1564145a33dc7c3848d5298e5bc1e4381885e98a52a"
+        },
+        {
+          "sequence": 4,
+          "type": "demo_clock_advanced",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:12.332Z",
+          "detail": {
+            "note": "Demo clock only; no chain or wall clock was changed."
+          },
+          "previousHash": "9bba997e67415a28d995b1564145a33dc7c3848d5298e5bc1e4381885e98a52a",
+          "hash": "cd560241d1294a15f2609db193d1851401d2cb4caea39efb1da708a34fddeb75"
+        },
+        {
+          "sequence": 5,
+          "type": "execute_started",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:12.332Z",
+          "detail": {
+            "scenario": "late"
+          },
+          "previousHash": "cd560241d1294a15f2609db193d1851401d2cb4caea39efb1da708a34fddeb75",
+          "hash": "8f4c3941af82a0fb2e89eb53ae87d49e643cd1f1a080be78afdbad2fc28ed29f"
+        },
+        {
+          "sequence": 6,
+          "type": "execute_completed",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:13.865Z",
+          "detail": {
+            "outputHash": "351644dfc1a447721f2047ef959c90b032471af93d64f0aa907807057b614fe5",
+            "observedLatencyMs": 1533,
+            "error": null
+          },
+          "previousHash": "8f4c3941af82a0fb2e89eb53ae87d49e643cd1f1a080be78afdbad2fc28ed29f",
+          "hash": "def39c6c9eda9a6e5ad424a8ec745826955e4c9fb6987962f9ba9a4eff2eae4b"
+        },
+        {
+          "sequence": 7,
+          "type": "verify",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:13.866Z",
+          "detail": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "Reserved quantity delivered",
+                "pass": true
+              },
+              {
+                "name": "Observed response within SLA",
+                "pass": false
+              },
+              {
+                "name": "Every unit has content and a source",
+                "pass": true
+              },
+              {
+                "name": "Sources match the declared corpus",
+                "pass": true
+              },
+              {
+                "name": "Output integrity",
+                "pass": true
+              },
+              {
+                "name": "Delivery completed inside the booked window",
+                "pass": true
+              }
+            ],
+            "verifier": "Commit-operated schema + latency verifier",
+            "proofHash": "4446df9d91ac002181185c96cd14a24226c7b64cfff05202d3c8abd16f7f9d33",
+            "limitation": "Verifies delivery shape and observed latency; does not prove semantic truth or independent resource availability."
+          },
+          "previousHash": "def39c6c9eda9a6e5ad424a8ec745826955e4c9fb6987962f9ba9a4eff2eae4b",
+          "hash": "309fb207a0b8946928366c62177109c5c021f6624b2b81a28b474af5f794308e"
+        },
+        {
+          "sequence": 8,
+          "type": "refund",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:13.866Z",
+          "detail": {
+            "kind": "simulation",
+            "signature": null,
+            "amountMicros": 150000,
+            "recipient": "demo-buyer",
+            "providerMicros": 0,
+            "refundMicros": 150000,
+            "escrowRemainingMicros": 0,
+            "proofHash": "4446df9d91ac002181185c96cd14a24226c7b64cfff05202d3c8abd16f7f9d33"
+          },
+          "previousHash": "309fb207a0b8946928366c62177109c5c021f6624b2b81a28b474af5f794308e",
+          "hash": "729b4a02dd726b6355c456ad4d8a51ab89c588abc7aaebf463252ad3f036178f"
+        }
+      ],
+      "payment": {
+        "kind": "simulation",
+        "amountMicros": 150000,
+        "signature": null
+      },
+      "execution": {
+        "units": [
+          {
+            "unit": 1,
+            "query": "Solana USDC payments",
+            "answer": "SPL tokens move between accounts for the same mint. TransferChecked checks the mint and its decimal precision. Circle lists a separate Solana Devnet USDC mint. Devnet tokens are used for testing and have no financial value.",
+            "citations": [
+              {
+                "id": "solana",
+                "title": "Solana token transfers",
+                "url": "https://solana.com/docs/tokens/basics/transfer-tokens"
+              },
+              {
+                "id": "circle",
+                "title": "Circle USDC addresses",
+                "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+              }
+            ]
+          },
+          {
+            "unit": 2,
+            "query": "Solana USDC payments",
+            "answer": "SPL tokens move between accounts for the same mint. TransferChecked checks the mint and its decimal precision. Circle lists a separate Solana Devnet USDC mint. Devnet tokens are used for testing and have no financial value.",
+            "citations": [
+              {
+                "id": "solana",
+                "title": "Solana token transfers",
+                "url": "https://solana.com/docs/tokens/basics/transfer-tokens"
+              },
+              {
+                "id": "circle",
+                "title": "Circle USDC addresses",
+                "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+              }
+            ]
+          },
+          {
+            "unit": 3,
+            "query": "Solana USDC payments",
+            "answer": "SPL tokens move between accounts for the same mint. TransferChecked checks the mint and its decimal precision. Circle lists a separate Solana Devnet USDC mint. Devnet tokens are used for testing and have no financial value.",
+            "citations": [
+              {
+                "id": "solana",
+                "title": "Solana token transfers",
+                "url": "https://solana.com/docs/tokens/basics/transfer-tokens"
+              },
+              {
+                "id": "circle",
+                "title": "Circle USDC addresses",
+                "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+              }
+            ]
+          }
+        ],
+        "observedLatencyMs": 1533,
+        "provider": "Commit ResearchNode / project-operated",
+        "corpusVersion": "2026-10-04",
+        "outputHash": "351644dfc1a447721f2047ef959c90b032471af93d64f0aa907807057b614fe5",
+        "scenario": "late"
+      },
+      "verification": {
+        "passed": false,
+        "checks": [
+          {
+            "name": "Reserved quantity delivered",
+            "pass": true
+          },
+          {
+            "name": "Observed response within SLA",
+            "pass": false
+          },
+          {
+            "name": "Every unit has content and a source",
+            "pass": true
+          },
+          {
+            "name": "Sources match the declared corpus",
+            "pass": true
+          },
+          {
+            "name": "Output integrity",
+            "pass": true
+          },
+          {
+            "name": "Delivery completed inside the booked window",
+            "pass": true
+          }
+        ],
+        "verifier": "Commit-operated schema + latency verifier",
+        "proofHash": "4446df9d91ac002181185c96cd14a24226c7b64cfff05202d3c8abd16f7f9d33",
+        "limitation": "Verifies delivery shape and observed latency; does not prove semantic truth or independent resource availability."
+      },
+      "settlement": {
+        "kind": "simulation",
+        "signature": null,
+        "amountMicros": 150000,
+        "recipient": "demo-buyer",
+        "providerMicros": 0,
+        "refundMicros": 150000,
+        "escrowRemainingMicros": 0,
+        "proofHash": "4446df9d91ac002181185c96cd14a24226c7b64cfff05202d3c8abd16f7f9d33"
+      },
+      "updatedAt": 1791117253866,
+      "demoClock": 1791117300000,
+      "executionStartedAt": 1791117300000,
+      "executionCompletedAt": 1791117301533
+    },
+    {
+      "id": "r_2c535b80-f8de-4069-b2b5-af4c49a5133f",
+      "quoteId": "q_9c68286e-5c11-4a67-a2d5-aecbaef301b0",
+      "mode": "demo",
+      "buyer": "demo-buyer",
+      "terms": {
+        "service": "search.v1",
+        "query": "Solana USDC payments",
+        "quantity": 3,
+        "start": 1791117300000,
+        "end": 1791117900000,
+        "unitPriceMicros": 50000,
+        "totalMicros": 150000,
+        "currency": "simulated USD",
+        "latencyLimitMs": 1500,
+        "minCitations": 1,
+        "provider": "Commit ResearchNode",
+        "verifier": "Commit-operated",
+        "refundPolicy": "Full refund if delivery fails SLA; unpaid holds do not count as paid orders.",
+        "custody": "Project-operated custody; no deployed custom escrow program"
+      },
+      "termsHash": "3ec5eeab64c6f38fb4e7211e4ec1f125954f9a4a26fbea12bedc39d232ebf326",
+      "status": "refunded",
+      "createdAt": 1791117253868,
+      "events": [
+        {
+          "sequence": 1,
+          "type": "quote",
+          "at": "2026-10-04T12:34:13.868Z",
+          "recordedAt": "2026-10-04T12:34:13.868Z",
+          "detail": {
+            "quoteId": "q_9c68286e-5c11-4a67-a2d5-aecbaef301b0",
+            "termsHash": "3ec5eeab64c6f38fb4e7211e4ec1f125954f9a4a26fbea12bedc39d232ebf326",
+            "expiresAt": 1791117300000
+          },
+          "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "hash": "558ad5fdb34591709681727cd805ebd4d24d7a3f0d49fd3302747e815bdd1b7e"
+        },
+        {
+          "sequence": 2,
+          "type": "reserve",
+          "at": "2026-10-04T12:34:13.868Z",
+          "recordedAt": "2026-10-04T12:34:13.868Z",
+          "detail": {
+            "quantity": 3,
+            "windowStart": 1791117300000,
+            "termsHash": "3ec5eeab64c6f38fb4e7211e4ec1f125954f9a4a26fbea12bedc39d232ebf326"
+          },
+          "previousHash": "558ad5fdb34591709681727cd805ebd4d24d7a3f0d49fd3302747e815bdd1b7e",
+          "hash": "8b4888182cceeabf7e934f9c626db88e62e102a99eef2c37ea1f475960191020"
+        },
+        {
+          "sequence": 3,
+          "type": "escrow",
+          "at": "2026-10-04T12:34:13.868Z",
+          "recordedAt": "2026-10-04T12:34:13.868Z",
+          "detail": {
+            "kind": "simulation",
+            "amountMicros": 150000,
+            "signature": null
+          },
+          "previousHash": "8b4888182cceeabf7e934f9c626db88e62e102a99eef2c37ea1f475960191020",
+          "hash": "0e52b5656e69eeced9fb00866051ec4969629d50f34bfd064a9679f10ffe1eca"
+        },
+        {
+          "sequence": 4,
+          "type": "demo_clock_advanced",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:13.868Z",
+          "detail": {
+            "note": "Demo clock only; no chain or wall clock was changed."
+          },
+          "previousHash": "0e52b5656e69eeced9fb00866051ec4969629d50f34bfd064a9679f10ffe1eca",
+          "hash": "bf5471108c1065f0d56862f820697e150557d3a9c4c0907391f25e5a14766d95"
+        },
+        {
+          "sequence": 5,
+          "type": "execute_started",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:13.868Z",
+          "detail": {
+            "scenario": "invalid"
+          },
+          "previousHash": "bf5471108c1065f0d56862f820697e150557d3a9c4c0907391f25e5a14766d95",
+          "hash": "1ee29b5ede5a6d9a3709ebc2267dbdaa542b2bede000d39195c95a2bc5298393"
+        },
+        {
+          "sequence": 6,
+          "type": "execute_completed",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:13.960Z",
+          "detail": {
+            "outputHash": "6074db07c668a8d577a974cf499b89773ce7c2dbf1cc3ad80e1dc076da65bc78",
+            "observedLatencyMs": 92,
+            "error": null
+          },
+          "previousHash": "1ee29b5ede5a6d9a3709ebc2267dbdaa542b2bede000d39195c95a2bc5298393",
+          "hash": "ecbd9afa431f0ddc15f9de1074771e7a8278cb0d45e6156d2ee87e30b2687e1c"
+        },
+        {
+          "sequence": 7,
+          "type": "verify",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:13.961Z",
+          "detail": {
+            "passed": false,
+            "checks": [
+              {
+                "name": "Reserved quantity delivered",
+                "pass": true
+              },
+              {
+                "name": "Observed response within SLA",
+                "pass": true
+              },
+              {
+                "name": "Every unit has content and a source",
+                "pass": false
+              },
+              {
+                "name": "Sources match the declared corpus",
+                "pass": true
+              },
+              {
+                "name": "Output integrity",
+                "pass": true
+              },
+              {
+                "name": "Delivery completed inside the booked window",
+                "pass": true
+              }
+            ],
+            "verifier": "Commit-operated schema + latency verifier",
+            "proofHash": "a1b1c440931c22a9accfc6b171776e0290f1a90182c0958919a7d7dbe5608e3f",
+            "limitation": "Verifies delivery shape and observed latency; does not prove semantic truth or independent resource availability."
+          },
+          "previousHash": "ecbd9afa431f0ddc15f9de1074771e7a8278cb0d45e6156d2ee87e30b2687e1c",
+          "hash": "cb1e889b17e4494723c1ddb6c6a6305b89d6cd2e924f707ab98d67b19877c8dc"
+        },
+        {
+          "sequence": 8,
+          "type": "refund",
+          "at": "2026-10-04T12:35:00.000Z",
+          "recordedAt": "2026-10-04T12:34:13.961Z",
+          "detail": {
+            "kind": "simulation",
+            "signature": null,
+            "amountMicros": 150000,
+            "recipient": "demo-buyer",
+            "providerMicros": 0,
+            "refundMicros": 150000,
+            "escrowRemainingMicros": 0,
+            "proofHash": "a1b1c440931c22a9accfc6b171776e0290f1a90182c0958919a7d7dbe5608e3f"
+          },
+          "previousHash": "cb1e889b17e4494723c1ddb6c6a6305b89d6cd2e924f707ab98d67b19877c8dc",
+          "hash": "30f9b5e65a365f269164d75c87f7a2287bcbbc030af2a1ac7200bb473189402c"
+        }
+      ],
+      "payment": {
+        "kind": "simulation",
+        "amountMicros": 150000,
+        "signature": null
+      },
+      "execution": {
+        "units": [
+          {
+            "unit": 1,
+            "query": "Solana USDC payments",
+            "answer": "SPL tokens move between accounts for the same mint. TransferChecked checks the mint and its decimal precision. Circle lists a separate Solana Devnet USDC mint. Devnet tokens are used for testing and have no financial value.",
+            "citations": []
+          },
+          {
+            "unit": 2,
+            "query": "Solana USDC payments",
+            "answer": "SPL tokens move between accounts for the same mint. TransferChecked checks the mint and its decimal precision. Circle lists a separate Solana Devnet USDC mint. Devnet tokens are used for testing and have no financial value.",
+            "citations": [
+              {
+                "id": "solana",
+                "title": "Solana token transfers",
+                "url": "https://solana.com/docs/tokens/basics/transfer-tokens"
+              },
+              {
+                "id": "circle",
+                "title": "Circle USDC addresses",
+                "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+              }
+            ]
+          },
+          {
+            "unit": 3,
+            "query": "Solana USDC payments",
+            "answer": "SPL tokens move between accounts for the same mint. TransferChecked checks the mint and its decimal precision. Circle lists a separate Solana Devnet USDC mint. Devnet tokens are used for testing and have no financial value.",
+            "citations": [
+              {
+                "id": "solana",
+                "title": "Solana token transfers",
+                "url": "https://solana.com/docs/tokens/basics/transfer-tokens"
+              },
+              {
+                "id": "circle",
+                "title": "Circle USDC addresses",
+                "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+              }
+            ]
+          }
+        ],
+        "observedLatencyMs": 92,
+        "provider": "Commit ResearchNode / project-operated",
+        "corpusVersion": "2026-10-04",
+        "outputHash": "6074db07c668a8d577a974cf499b89773ce7c2dbf1cc3ad80e1dc076da65bc78",
+        "scenario": "invalid"
+      },
+      "verification": {
+        "passed": false,
+        "checks": [
+          {
+            "name": "Reserved quantity delivered",
+            "pass": true
+          },
+          {
+            "name": "Observed response within SLA",
+            "pass": true
+          },
+          {
+            "name": "Every unit has content and a source",
+            "pass": false
+          },
+          {
+            "name": "Sources match the declared corpus",
+            "pass": true
+          },
+          {
+            "name": "Output integrity",
+            "pass": true
+          },
+          {
+            "name": "Delivery completed inside the booked window",
+            "pass": true
+          }
+        ],
+        "verifier": "Commit-operated schema + latency verifier",
+        "proofHash": "a1b1c440931c22a9accfc6b171776e0290f1a90182c0958919a7d7dbe5608e3f",
+        "limitation": "Verifies delivery shape and observed latency; does not prove semantic truth or independent resource availability."
+      },
+      "settlement": {
+        "kind": "simulation",
+        "signature": null,
+        "amountMicros": 150000,
+        "recipient": "demo-buyer",
+        "providerMicros": 0,
+        "refundMicros": 150000,
+        "escrowRemainingMicros": 0,
+        "proofHash": "a1b1c440931c22a9accfc6b171776e0290f1a90182c0958919a7d7dbe5608e3f"
+      },
+      "updatedAt": 1791117253961,
+      "demoClock": 1791117300000,
+      "executionStartedAt": 1791117300000,
+      "executionCompletedAt": 1791117300092
+    }
+  ],
+  "balance": {
+    "balanceMicros": 9850000,
+    "providerEarnedMicros": 150000
+  }
+}
